@@ -1,0 +1,20 @@
+
+.Carditem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Itemimg {
+    width: 60%;
+}
+
+.Itemname{
+    font-family: 'Lora', serif;
+    color: #817FE9;
+}
+
+.info{
+    text-align: left;
+    font-family: "Lexend", sans-serif;
+}

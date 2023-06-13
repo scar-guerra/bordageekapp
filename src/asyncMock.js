@@ -19,7 +19,7 @@ const bordados = [
 
     category: 'series',
 
-    img: 'https://arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/SHLWP7FOUNBJ5LOE26CMC3YEFQ.gif',
+    img: 'https://i.ibb.co/2WWrrkC/coraje.jpg',
 
     description: "Tamaño: 23 cms",
 
@@ -32,7 +32,7 @@ const bordados = [
 
     category: 'starwars',
 
-    img: "https://i.ebayimg.com/images/g/KWQAAOSwzhRj01WE/s-l500.jpg",
+    img: "https://i.ibb.co/VVTzgW6/star-wars.jpg",
 
     description: "Tamaño: 14 cms",
 
@@ -45,7 +45,7 @@ const bordados = [
 
     category: 'series',
 
-    img: "https://upload.wikimedia.org/wikipedia/en/5/53/Snoopy_Peanuts.png",
+    img: "https://i.ibb.co/FsSTMT6/snoopy.jpg",
 
     description: "Tamaño: 10 cms",
 
@@ -58,7 +58,7 @@ const bordados = [
 
     category: 'pokemon',
 
-    img: 'https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/7d/latest/20201009233510/Absol.png/400px-Absol.png',
+    img: 'https://i.ibb.co/RzBxNDR/absol.jpg',
 
     description: "Tamaño: 15 cms",
 
@@ -72,7 +72,7 @@ const bordados = [
     
         category: 'series',
     
-        img: 'https://www.seekpng.com/png/detail/42-424797_report-abuse-imagenes-de-pato-gravity-falls.png',
+        img: 'https://i.ibb.co/PGvNshJ/pato.jpg',
     
         description: "Tamaño: 13 cms",
     
@@ -87,7 +87,7 @@ const bordados = [
 
     category: 'pokemon',
 
-    img: 'https://images.wikidexcdn.net/mwuploads/wikidex/f/ff/latest/20201109211603/Togepi.png?20201109211603',
+    img: 'https://i.ibb.co/D7c3Lpg/togepi.jpg',
 
     description: "Tamaño: 9 cms",
 

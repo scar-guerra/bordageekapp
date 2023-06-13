@@ -7,7 +7,6 @@
 .Controls{
     display: flex;
     align-items: center;
-    padding: 0px 20px;
 }
 
 .ButtonMasMenos{
@@ -40,6 +39,7 @@
     font-size: 15px;
     border-radius: 5px;
     cursor: pointer;
+    margin-left: 20px;
 }
 
 .Number{

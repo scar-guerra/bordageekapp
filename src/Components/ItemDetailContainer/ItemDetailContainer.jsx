@@ -7,7 +7,7 @@ const ItemDetailContainer = () =>{
 
     const {itemId} = useParams();
 
-    const [product, setProduct] = useState({});
+    const [Product, setProduct] = useState({});
 
 
 
@@ -23,7 +23,7 @@ const ItemDetailContainer = () =>{
 
     return(
         <div className="ItemDetailContainer">
-            <ItemDetail {...product}/>
+            <ItemDetail {...Product}/>
         </div>)
     
 }

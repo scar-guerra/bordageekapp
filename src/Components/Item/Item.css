@@ -1,0 +1,15 @@
+.CardItem {
+    width: 33% !important;
+    height: auto;
+    margin-bottom: 5vh;
+    display: inline-block;
+}
+
+.ItemName{
+    font-family: 'Lora', serif;
+    color: #817FE9;
+}
+
+.ItemImg {
+    width: 60%;
+}
