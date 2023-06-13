@@ -1,0 +1,50 @@
+.Counter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Controls{
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.ButtonMasMenos{
+    width: 3vh;
+    height: 3vh;
+    border-radius: 50%;
+    display: block;
+    color: #3c3ab3;
+    background-color: #817fe961;
+    border: 0px;
+    font-family: 'Lora', serif;
+    font-size: 15px;
+    font-weight: 700;
+
+}
+
+.ButtonMasMenos:hover{
+    color: #ffffff;
+    background-color: #ddc0ec;
+    transition: 0.3s;
+} 
+
+.ButtonAgregar{
+    padding: 7px 10px;
+    font-family: 'Lora', serif;
+    background: #fcfaff;
+    color: #a986bb;
+    border: 1px solid #f0d2ff;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Number{
+    padding: 0px 26px;
+    font-size: 18px;
+    color: #a986bb;
+    font-family: "Lexend", sans-serif;
+}

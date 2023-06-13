@@ -1,14 +1,18 @@
 import CartWidget  from "../CartWidget/CartWidget"
 import LogoBrand from "../LogoBrand/Logobrand"
+import { NavLink, Link } from "react-router-dom"
 
 const Navbar = () => {
     return(
         <nav>
+            <Link to ='/'>
             <LogoBrand/>
-            <div>
-                <button className="navbar_botones">Pokemon</button>
-                <button className="navbar_botones">Harry Potter</button>
-                <button className="navbar_botones">Star Wars</button>
+            </Link>
+           
+            <div className="Categories">
+                <NavLink to={`/category/pokemon`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Pokemon</NavLink>
+                 <NavLink to={`/category/series`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Series</NavLink>
+                 <NavLink to={`/category/starwars`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Star Wars</NavLink>
             </div>
             <CartWidget />
         </nav>
