@@ -1,23 +1,40 @@
 import { useEffect, useState } from "react"
-import { getProducts, getProductsByCategory } from "../../asyncMock"
 import ItemList from "../ItemList/ItemList"
 import { useParams } from "react-router-dom"
+import {collection, getDocs, query, where} from 'firebase/firestore'
+import {db} from '../../service/firebase/firebaseConfig'
 
 const ItemListContainer = ({saludo}) => {
 
     const [bordados, setBordados] = useState([])
+    const [loading, setLoading] = useState(true)
 
     const {categoryId} = useParams()
 
     useEffect(() =>{
-        const asyncFunc = categoryId ? getProductsByCategory : getProducts
-        asyncFunc(categoryId)
+        setLoading(true)
+
+        const collectionRef = categoryId
+        ? query(collection(db, 'bordados'), where('category', '==', categoryId))
+        : collection(db, 'bordados')
+
+        getDocs(collectionRef)
         .then(response => {
-            setBordados(response)
+            const productsAdapted=response.docs.map (doc=> {
+                const data = doc.data()
+                return {id: doc.id, ...data}
+
+            })
+            setBordados(productsAdapted)
         })
-        .catch(error =>{
-            console.error(error)
+        .catch(error => {
+            console.log(error)
         })
+        .finally(() =>{
+            setLoading(false)
+        })
+
+
     }, [categoryId])
 
 
