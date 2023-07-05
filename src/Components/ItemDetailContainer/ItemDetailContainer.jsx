@@ -9,6 +9,8 @@ const ItemDetailContainer = () =>{
   const [product, setProduct] = useState(null)
   const [loading, setLoading] = useState(true)
 
+ 
+
 
     const {itemId} = useParams();
 
@@ -19,8 +21,8 @@ const ItemDetailContainer = () =>{
 
       getDoc(docRef)
       .then(response =>{
-        const data = response.data()
-        const productsAdapted = {id: response.id, ...data}
+        const fields = response.data()
+        const productsAdapted = {id: response.id, ...fields}
         setProduct(productsAdapted)
       })
       .catch(error => {
@@ -30,10 +32,12 @@ const ItemDetailContainer = () =>{
         setLoading(false)
       })
 
-      
-
-    }, [itemId]);
+     
     
+    }, [itemId]);
+    if(loading) {
+      return <h1>Estamos generando tu compra</h1>
+  }
 
     return(
         <div className="ItemDetailContainer">

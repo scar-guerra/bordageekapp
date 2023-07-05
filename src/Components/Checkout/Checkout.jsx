@@ -1,7 +1,10 @@
 
-import { collection } from 'firebase/firestore'
+import { collection,query, where, documentId, getDoc, writeBatch, addDoc } from 'firebase/firestore'
 import {db} from '../../service/firebase/firebaseConfig'
-import CheckoutForm from '../CheckoutForm/ChekoutForm'
+import CheckoutForm from '../CheckoutForm/CheckoutForm'
+import { useState } from 'react'
+import { useContext } from 'react'
+import { CartContext } from '../../Context/CartContext'
 
 const Checkout = () => {
     const[loading, setLoading] = useState(false)
@@ -18,15 +21,14 @@ const Checkout = () => {
                     name, phone, email
                 },
                 items: cart,
-                total: total,
-                date: Timestamp.fromDate(new Date())
+                total: total
 
             }
             const batch = writeBatch(db)
             const outOfStock= []
             const ids = cart.map(prod =>prod.id)
             const productsRef = collection (db, 'bordados')
-            const productsAddedFormFirestore = await getDoc(query(productsRef, whre(documentId(), 'in', i, ids)))
+            const productsAddedFormFirestore = await getDoc(query(productsRef, where(documentId(), 'in', ids)))
             const {docs} = productsAddedFormFirestore
 
             docs.forEach(doc => {
