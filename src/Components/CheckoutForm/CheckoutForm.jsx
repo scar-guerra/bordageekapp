@@ -1,10 +1,10 @@
-import './CheckoutForm.css'
 import { useState } from 'react'
 
+
 const CheckoutForm = ({onConfirm}) => {
-    const [name, setName] = useState('')
-    const [phone, setPhone] = useState('')
-    const [email, setEmail] = useState('')
+    const [name, setName] = useState ('')
+    const [phone, setPhone] = useState ('')
+    const [email, setEmail] = useState ('')
 
     const handleConfirm = (event) =>{
         event.preventDefault()
@@ -44,7 +44,7 @@ const CheckoutForm = ({onConfirm}) => {
                 </label>
                 
                 <div className='Label'>
-                    <button type= 'submit' className='Option'>Crear Pedido</button>
+                    <button type= 'submit' className='Button'>Crear Pedido</button>
                 </div>
 
             </form>

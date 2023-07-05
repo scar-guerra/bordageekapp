@@ -17,7 +17,7 @@ const ItemDetailContainer = () =>{
     useEffect(() =>{
       setLoading(true)
 
-      const docRef = doc(db, 'bordados', itemId)
+      const docRef = doc(db, 'products', itemId)
 
       getDoc(docRef)
       .then(response =>{
@@ -36,7 +36,7 @@ const ItemDetailContainer = () =>{
     
     }, [itemId]);
     if(loading) {
-      return <h1>Estamos generando tu compra</h1>
+      return <h1>Cargando Productos</h1>
   }
 
     return(

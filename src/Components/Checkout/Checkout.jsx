@@ -27,7 +27,7 @@ const Checkout = () => {
             const batch = writeBatch(db)
             const outOfStock= []
             const ids = cart.map(prod =>prod.id)
-            const productsRef = collection (db, 'bordados')
+            const productsRef = collection (db, 'products')
             const productsAddedFormFirestore = await getDoc(query(productsRef, where(documentId(), 'in', ids)))
             const {docs} = productsAddedFormFirestore
 

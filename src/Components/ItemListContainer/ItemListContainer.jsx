@@ -14,8 +14,8 @@ const ItemListContainer = ({saludo}) => {
     useEffect(() =>{
         
         const collectionRef = !categoryId
-        ? collection(db, 'bordados')
-        : query(collection(db, 'bordados'), where('category', '==', categoryId))
+        ? collection(db, 'products')
+        : query(collection(db, 'products'), where('category', '==', categoryId))
         setLoading(true)
 
         getDocs(collectionRef)
@@ -35,7 +35,7 @@ const ItemListContainer = ({saludo}) => {
        
     }, [categoryId])
     if(loading) {
-        return <h1>Loading</h1>
+        return <h1>Cargando Productos</h1>
     }
 
     return(
