@@ -1,0 +1,30 @@
+.Form{
+    display: grid;
+}
+.Label{
+    display: grid;
+    width: 25%;
+    margin: auto;
+    padding: 15px 0px;
+}
+
+.Button{
+    background-color: #fcfaff;
+    border: 1px solid #f0d2ff;
+    color: #aa86bc;
+    padding: 10px 17px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.Input{
+    border-bottom: 1px solid #aa86bc;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 0px 50px;
+}
+
+.Input:focus-visible{
+outline: none;
+}

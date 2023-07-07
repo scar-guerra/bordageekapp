@@ -1,5 +1,5 @@
 
-import { collection,query, where, documentId, getDoc, writeBatch, addDoc } from 'firebase/firestore'
+import { collection,query, where, documentId, getDocs, writeBatch, addDoc,  } from 'firebase/firestore'
 import {db} from '../../service/firebase/firebaseConfig'
 import CheckoutForm from '../CheckoutForm/CheckoutForm'
 import { useState } from 'react'
@@ -28,7 +28,7 @@ const Checkout = () => {
             const outOfStock= []
             const ids = cart.map(prod =>prod.id)
             const productsRef = collection (db, 'products')
-            const productsAddedFormFirestore = await getDoc(query(productsRef, where(documentId(), 'in', ids)))
+            const productsAddedFormFirestore = await getDocs(query(productsRef, where(documentId(), 'in', ids)))
             const {docs} = productsAddedFormFirestore
 
             docs.forEach(doc => {
@@ -38,7 +38,7 @@ const Checkout = () => {
                 const productAddedToCart = cart.find(prod => prod.id === doc.id)
                 const prodQuantity = productAddedToCart?.quantity
                     if(stockDb >= prodQuantity){
-                        batch.update(doc.ref, {stock: stockDb -prodQuantity})
+                        batch.update(doc.ref, {stock: stockDb - prodQuantity})
 
                     }else{
                         outOfStock.push({id:doc.id, ...dataDoc})

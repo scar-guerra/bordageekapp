@@ -13,6 +13,7 @@ const CartWidget = ()=> {
 
         <Link to='/cart' className='CartWidget' >
             <img style={{width:30, paddingRight:8}}  src={cart} alt='cart-logo'/> {totalQuantity}
+            
         </Link>
     )
 }
